@@ -17,6 +17,26 @@ Cette application web permet de visualiser et de contrôler une caméra TP-Link 
 pip install -r requirements.txt
 ```
 
+## Configuration
+
+1. Copiez le fichier `.env.example` en `.env` :
+```bash
+cp .env.example .env
+```
+
+2. Modifiez le fichier `.env` avec vos informations :
+```bash
+# Adresse IP de la caméra sur votre réseau local
+CAMERA_IP=192.168.1.100
+
+# Identifiants de la caméra
+CAMERA_USERNAME=admin
+CAMERA_PASSWORD=votre_mot_de_passe
+
+# Port de l'application web
+PORT=5000
+```
+
 ## Utilisation
 
 ### Méthode 1 : Exécution via Python
