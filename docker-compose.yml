@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  tapoview:
+    image: tapoview:latest
+    ports:
+      - "8765:8765"
+    volumes:
+      - ./templates:/app/templates
+      - ./config:/app/config
+    environment:
+      - FLASK_ENV=development
+    restart: unless-stopped
+    network_mode: "host" 

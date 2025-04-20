@@ -1,0 +1,25 @@
+# Fichiers sensibles
+.env
+docker-compose.local.yml
+
+# Fichiers Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+.venv/
+
+# Fichiers de configuration IDE
+.idea/
+.vscode/
+
+# Fichiers de logs
+*.log
+
+# Fichiers de base de données
+*.db
+*.sqlite3 
