@@ -7,6 +7,7 @@ Cette application web permet de visualiser et de contrôler une caméra TP-Link 
 - Python 3.7 ou supérieur
 - Caméra TP-Link Tapo C210 connectée au réseau local
 - Connexion RTSP activée sur la caméra
+- Docker (optionnel, pour l'exécution en conteneur)
 
 ## Installation
 
@@ -18,13 +19,28 @@ pip install -r requirements.txt
 
 ## Utilisation
 
+### Méthode 1 : Exécution via Python
+
 1. Assurez-vous que votre caméra est connectée au réseau et que l'URL RTSP est correcte dans le fichier `app.py`
 2. Lancez l'application :
 ```bash
 python app.py
 ```
 3. Ouvrez votre navigateur et accédez à `http://localhost:5000`
-4. Utilisez les boutons pour faire pivoter l'image de la caméra
+
+### Méthode 2 : Exécution via Docker
+
+1. Construisez l'image Docker :
+```bash
+docker build -t tapoview .
+```
+
+2. Lancez le conteneur :
+```bash
+docker run -p 5000:5000 tapoview
+```
+
+3. Ouvrez votre navigateur et accédez à `http://localhost:5000`
 
 ## Fonctionnalités
 
